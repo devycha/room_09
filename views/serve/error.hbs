@@ -1,0 +1,17 @@
+<% layout('/layout/boilerplate') %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <a href="#errorDetail" class="btn btn-danger text-warning" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="errorDetail">
+        오류가 발생하였습니다.
+      </a>
+      <div class="container">
+        <div class="collapse" id="errorDetail">
+          <div class="card card-body mt-3 bg-warning text-danger">
+            <%=err%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

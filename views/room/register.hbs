@@ -1,0 +1,71 @@
+
+{{> boilerplate}}
+<link rel="stylesheet" href="/css/register.css">
+<div class="container d-flex justify-content-center">
+    <div class="membership-form">
+        <h1 class="display-1 text-center text"><a href="/">09ROOM</a></h1>
+        {{> flash}}
+        <div class="member-info">
+            <form action="/users/signup" method="POST" class="membershipForm">
+                <div class="row">
+                    <div class="mb-3 col-lg-4">
+                        <label for="code" class="form-label validated-form" novalidate>학번</label>
+                        <div class="form-floating mb-3">
+                            <input name="code" type="number" class="form-control" id="code" placeholder="3221XXXX" minlength="8" maxlength="8" required>
+                            <label for="code">학번을 입력하세요</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 col-lg-2">
+                        <label for="code" class="form-label validated-form" novalidate>학년</label>
+                        <div class="form-floating mb-3">
+                            <input name="grade" type="number" class="form-control" id="grade" placeholder="학년" min="1" max="4" required>
+                            <label for="grade">학년</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="password" class="form-label">비밀번호</label>
+                        <div class="form-floating">
+                            <input name="password" type="password" class="form-control" id="password" placeholder="비밀번호" required>
+                            <label for="password">비밀번호</label>
+                        </div>
+                    </div>
+                    <div id="emailHelp" class="form-text mt-0 mb-2">저희 동아리는 악의적인 개인정보 유출을 절대 하지 않습니다.</div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-lg-6">
+                        <label for="email" class="form-label">이메일 주소</label>
+                        <div class="form-floating mb-3">
+                            <input name="email" type="email" class="form-control" id="email" placeholder="이메일 주소" required>
+                            <label for="email">이메일 주소를 입력하세요</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="username" class="form-label">이름</label>
+                        <div class="form-floating mb-3">
+                            <input name="name" type="text" class="form-control" id="name" placeholder="이름" required>
+                            <label for="name">ex) 홍길동</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="container px-4 mb-3">
+                    <div class="row">
+                        <div class="mb-3 form-check col-lg-3">
+                            <input name="agreement[privacy]" type="checkbox" class="form-check-input" id="agreement[privacy]" required>
+                            <label class="form-check-label" for="agreement[privacy]" value="true">개인정보 제공 동의</label>
+                        </div>
+                        <div class="mb-3 form-check col-lg-3">
+                            <input name="agreement[privacy3]" type="checkbox" class="form-check-input" id="agreement[privacy3]" required>
+                            <label class="form-check-label" for="agreement[privacy3]" value="true">제 3자 정보 이용 동의</label>
+                        </div>
+                        <div class="mb-3 form-check col-lg-3">
+                            <input name="agreement[sms]" type="checkbox" class="form-check-input" id="agreement[sms]" required>
+                            <label class="form-check-label" for="agreement[sms]" value="true">SMS 수신 동의</label>
+                        </div>
+                    </div>
+                <button class="btn btn-secondary p-2">가입 신청</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{> footer}}

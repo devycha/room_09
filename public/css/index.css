@@ -1,0 +1,136 @@
+.title {
+  font-family: 'Jua';
+}
+
+.carousel-item > img {
+  height: 25rem;
+}
+.carousel-item1,
+.carousel-item2,
+.carousel-item3 {
+  height: 25rem;
+  background-position: center center;
+  background-size: cover;
+}
+
+.carousel-item1 {
+  background-image: url(../images/step1.jpg);
+  font-family: 'Jua';
+}
+.carousel-item2 {
+  background-image: url(../images/step2.jpg);
+  font-family: 'Jua';
+}
+.carousel-item3 {
+  background-image: url(../images/step3.jpg);
+  font-family: 'Jua';
+}
+
+.home-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Jua';
+}
+
+.newspeed {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  background-color: rgb(236, 233, 233);
+  border-radius: 10px;
+  margin: 30px 20px;
+  padding: 5px 0;
+  overflow: auto;
+}
+
+.newslist {
+  padding: 0;
+}
+
+.newspeed:hover {
+  box-shadow: 0px 1em 1em -0.4em rgb(170, 168, 168);
+  transition: 0.5s;
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.newspeed > span {
+  font-family: 'Jua', Courier, monospace;
+  font-size: 20px;
+  display: block;
+  color: grey;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+}
+
+.list {
+  text-align: left;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list > li {
+  list-style: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 1em;
+}
+
+.list > li:last-child {
+  border-bottom: none;
+}
+
+.list > li > a {
+  text-decoration: none;
+  color: rgb(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: block;
+}
+
+.list > li:hover {
+  background-color: rgb(223, 219, 219);
+}
+
+.questionForm {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question {
+  text-align: center;
+  font-weight: 700;
+}
+
+.questionlist {
+  border: 1px solid black;
+  min-width: 600px;
+  min-height: 900px;
+  width: 50%;
+  height: 80%;
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.board_list {
+  padding: 0px;
+  display: block;
+  text-decoration: none;
+  color: gray;
+}
+
+.board_list:hover {
+  color: black;
+}

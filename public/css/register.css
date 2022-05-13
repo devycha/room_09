@@ -1,0 +1,12 @@
+@font-face {
+    src: url("../fonts/BMJUA_otf.otf");
+    font-family: "Jua";
+}
+
+.text-center {
+    font-family: "Jua";
+}
+.text-center>a {
+    color: rgb(128,128,128);
+    text-decoration: none;
+}

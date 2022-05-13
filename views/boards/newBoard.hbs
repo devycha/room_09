@@ -1,0 +1,37 @@
+
+{{> boilerplate}}
+<style>
+  .inputfield {
+    height: 400px;
+  }
+
+  .inputtext {
+    width: 50%
+  }
+
+  .inputtitle {
+    margin-bottom: 200px;
+  }
+
+  .input-group {
+    margin: auto;
+  }
+</style>
+<link rel="stylesheet" href="/css/board.css">
+<div class="container">
+  <form action="/boards" method="POST">
+      <div class="inputtitle input-group">
+        <span class="input-group-text">제목</span>
+        <input name="title" class="inputtext" aria-label="With input"></input>
+      </div>
+      <br>
+      <div class="input-group">
+        <span class="inputfield input-group-text">본문</span>
+        <input name="description" class="inputfield inputtext" aria-label="With input"></input>
+      </div>
+      <br><br>
+      <button type="submit">제출</button>
+  </form>
+</div>
+
+

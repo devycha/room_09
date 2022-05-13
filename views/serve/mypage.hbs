@@ -1,0 +1,66 @@
+{{> boilerplate}}
+
+<link rel="stylesheet" href="/css/register.css">
+<div class="container d-flex justify-content-center">
+    <div class="membership-form">
+        <h1 class="display-1 text-center text"><a href="/">09ROOM</a></h1>
+        
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">마이페이지</li>
+                <li class="breadcrumb-item"><a class="text-muted" href="/users/mypage">정보 변경</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><a class="text-decoration-none text-muted" href="/users/mypage/password">비밀번호 변경</a></li>
+            </ol>
+        </nav>
+        <div class="member-info">
+            <form action="/users/{{currentUser.id}}?_method=PATCH" method="POST" class="membershipForm">
+                <div class="row">
+                    <div class="mb-3 col-lg-4">
+                        <label for="code" class="form-label validated-form" novalidate>학번</label>
+                        <div class="form-floating mb-3">
+                            <input value={{currentUser.code}} type="number" class="form-control code" id="code" placeholder="3221XXXX" minlength="8" maxlength="8" readonly>
+                            <label for="code">학번 변경 불가</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 col-lg-2">
+                        <label for="code" class="form-label validated-form" novalidate>학년</label>
+                        <div class="form-floating mb-3">
+                            <input value={{currentUser.grade}} name="grade" type="number" class="form-control grade" id="grade" placeholder="학년" min="1" max="4" readonly>
+                            <label for="grade">학년</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="password" class="form-label">비밀번호</label>
+                        <div class="form-floating">
+                            <input type="password" class="form-control password" id="password" placeholder="비밀번호" readonly>
+                            <label for="password">"마이페이지 > 비밀번호 변경" 에서 가능합니다.</label>
+                        </div>
+                    </div>
+                    <div id="emailHelp" class="form-text mt-0 mb-2">저희 동아리는 악의적인 개인정보 유출을 절대 하지 않습니다.</div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-lg-6">
+                        <label for="email" class="form-label">이메일 주소</label>
+                        <div class="form-floating mb-3">
+                            <input value={{currentUser.email}} name="email" type="email" class="form-control email" id="email" placeholder="이메일 주소" readonly>
+                            <label for="email">이메일</label>
+                        </div>
+                    </div>
+                    <div class="mb-3 col-lg-6">
+                        <label for="username" class="form-label">이름</label>
+                        <div class="form-floating mb-3">
+                            <input value={{currentUser.name}} name="name" type="text" class="form-control name" id="name" placeholder="이름" readonly>
+                            <label for="name">이름</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="container px-4 mb-3">
+                <button class="update-user-btn btn btn-secondary p-2">수정 하기</button> ← 잠금을 풀고 수정하시려면 클릭하세요
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/js/mypage.js"></script>
+
+{{> footer}}

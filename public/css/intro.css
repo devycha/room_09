@@ -1,0 +1,120 @@
+section {
+  font-family: 'Jua';
+}
+
+/* scroll to Top */
+#scrolltoTop {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  padding: 15px;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#scrolltoTop:hover {
+  background-color: grey;
+}
+
+/* jumbotron */
+.jumbotron {
+  background: url(../images/img1.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-origin: border-box;
+  opacity: 0.9;
+  color: white;
+  height: 600px;
+  padding: 2rem;
+}
+
+@media (max-width: 793px) {
+  .jumbotron {
+    height: 200px;
+  }
+}
+
+#introMore {
+  transition: 0.7s;
+}
+
+/* section me */
+.rgba-black-light {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+#me {
+  background-image: url(../images/tile.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+#me img {
+  border-radius: 15px;
+}
+
+#brand-history {
+  background-image: url(../images/brand.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.brand-content:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#aboutme .nav-link {
+  transform: none;
+  color: black;
+}
+
+/* section about me */
+.shadow-xl {
+  box-shadow: 0 1rem 2.5rem -0.8rem rgba(0, 0, 0, 0.56),
+    0 0.25rem 1.5rem rgba(0, 0, 0, 0.12),
+    0 0.5rem 0.75rem -0.3rem rgba(0, 0, 0, 0.2);
+}
+
+/* lightbox hover effect */
+.image-lightbox:hover img {
+  opacity: 0.6;
+  transform: scale(0.9, 0.9);
+  transition: 0.3s ease-in-out;
+}
+
+.image-lightbox .col img:hover {
+  transform: rotate(-10deg) scale(1.05, 1.05);
+  opacity: 1;
+}
+
+/* FAQ */
+.faq .accordion {
+  border: none;
+}
+
+.faq .accordion-header {
+  background-color: transparent;
+  padding: 0.75rem 0;
+}
+
+.faq .accordion-button:active {
+  border: none;
+}
+
+.faq .accordion-button {
+  background-color: none;
+  color: purple;
+}
+
+.faq .accordion-body {
+  padding: 5rem;
+  font-size: 20px;
+}

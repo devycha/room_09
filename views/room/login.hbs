@@ -1,0 +1,20 @@
+
+{{> boilerplate}}
+<link rel="stylesheet" href="/css/register.css">
+<div class="container">
+  <div class="membership-form">
+    <h1 class="display-1 text-center text"><a href="/">09ROOM</a></h1>
+  </div>
+  {{> flash}}
+  <form action="/users/login" method="POST" class="" p-4>
+      <div class="mb-3">
+        <label for="code" class="form-label">학번</label>
+        <input name="code" type="text" class="form-control" id="code" placeholder="3221XXXX" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">비밀번호</label>
+        <input name="password" type="password" class="form-control" id="password" placeholder="비밀번호" required>
+      </div>
+      <button type="submit" class="btn btn-primary">로그인</button>
+  </form>
+</div>

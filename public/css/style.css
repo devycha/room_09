@@ -1,0 +1,355 @@
+@font-face {
+  src: url('../fonts/BMJUA_ttf.ttf');
+  font-family: 'Jua';
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.carousel-item {
+  background-size: cover;
+  height: 400px;
+}
+
+.carousel-item.item1 {
+  background-image: url(../images/ex_main_img_20210318_1.jpg);
+  background-position: center center;
+}
+
+.carousel-item.item2 {
+  background-image: url(../images/ex_main_img_20210329_1.jpg);
+  background-position: center center;
+}
+
+.carousel-item.item3 {
+  background-image: url(../images/37052.jpg);
+  background-position: center center;
+}
+
+.intro {
+  color: white;
+  text-align: center;
+}
+
+.intro h2 a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.intro h2 a:hover {
+  color: darkgrey;
+}
+
+.room {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.room:hover {
+  color: darkgrey;
+}
+
+.main {
+  text-decoration: none;
+  color: black;
+  margin-right: 8px;
+}
+
+/* 로그인창 */
+
+.mbs .mbs_mp {
+  text-align: right;
+  font-size: 15px;
+  text-decoration: none;
+  color: gray;
+}
+
+.mbs .mbs_mp a {
+  color: inherit;
+  text-decoration: inherit;
+  margin-left: 7px;
+}
+
+.mbs .mbs_mp .mp:hover {
+  color: black;
+  font-weight: 700;
+}
+
+.mbs .mbs_mp .lg:hover {
+  color: black;
+  font-weight: 700;
+}
+
+.mbs .mbs_mp .mn:hover {
+  color: black;
+  font-weight: 700;
+}
+
+.login-form {
+  margin: 0 auto;
+  background-color: #eee;
+  width: 40%;
+  height: 40%;
+  padding: 0px 5px 5px 5px;
+  margin-top: 100px;
+  border-radius: 10px;
+  font-size: 1em;
+  padding: 0 1rem;
+  box-shadow: 0px 1em 1em -0.4em rgb(170, 168, 168);
+}
+
+@media (max-width: 800px) {
+  .login-form {
+    width: 60%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-form {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+.text-field {
+  font-size: 1em;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  font-size: 1em;
+  background-color: rgb(170, 168, 168);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.links {
+  margin-top: 30px;
+  color: #9b9b9b;
+}
+
+.links a {
+  font-size: 12px;
+  color: #9b9b9b;
+}
+
+.links a:hover {
+  color: black;
+  font-weight: 900;
+}
+
+.loginmark {
+  text-align: center;
+}
+
+.loginmark img {
+  width: 20%;
+  margin: 10px 0;
+  opacity: 0.8;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+
+.loginmark img:hover {
+  transform: translateY(-0.5rem);
+}
+
+.home-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newspeed {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  background-color: rgb(236, 233, 233);
+  border-radius: 10px;
+  margin: 30px 20px;
+  padding: 5px 0;
+}
+
+.newspeed:hover {
+  box-shadow: 0px 1em 1em -0.4em rgb(170, 168, 168);
+  transition: 0.5s;
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.newspeed > span {
+  font-family: 'Jua', Courier, monospace;
+  font-size: 20px;
+  display: block;
+  color: grey;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+}
+
+.list {
+  text-align: left;
+  padding-left: 0px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.list > li {
+  list-style: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 1em;
+}
+
+.list > li:last-child {
+  border-bottom: none;
+}
+
+.list > li > a {
+  text-decoration: none;
+  color: rgb(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.list > li:hover {
+  background-color: rgb(223, 219, 219);
+}
+
+.questionForm {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question {
+  text-align: center;
+  font-weight: 700;
+}
+
+.questionlist {
+  border: 1px solid black;
+  min-width: 600px;
+  min-height: 900px;
+  width: 50%;
+  height: 80%;
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.accordion {
+  margin-top: 20px;
+  min-width: 80%;
+  max-width: 80%;
+}
+
+.accordion-body {
+  margin-left: 15px;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.questionText {
+  text-align: center;
+  width: 95%;
+  height: 70%;
+  font-size: 1rem;
+}
+
+.writeButton {
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 20%;
+}
+
+.registerQuestion {
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 5%;
+}
+
+.offcanvas {
+  height: 45%;
+}
+
+.offcanvas-body {
+  text-align: center;
+}
+
+.accordion-button {
+  overflow: auto;
+}
+
+.accordion-body {
+  overflow: auto;
+}
+
+.alert {
+  margin-top: 20px;
+}
+
+.request > a {
+  text-decoration: none;
+}
+
+.request {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.requestLink {
+  align-self: center;
+}
+
+.request:hover {
+  background-color: rgb(223, 219, 219);
+}
+
+.requestForm {
+  margin: 5rem;
+}
+
+.requestTitle {
+  max-width: 15rem;
+}
+
+.requestContent {
+  margin-top: 1rem;
+}
+
+.btn:last-child {
+  margin-top: 3rem;
+  float: right;
+}

@@ -1,0 +1,22 @@
+
+{{> boilerplate}}
+<link rel="stylesheet" href="/css/board.css">
+
+<div class="container text-center board-form">
+  {{>flash}}
+  <div class="row">
+    <div class="board-title col-m-12 col-lg-6">제목: {{book.title}}</div>
+    <div class="board-title col-m-12 col-lg-6">작성자: {{book.seller.name}}({{book.seller.code}})</div>
+  </div>
+  
+  <div class="board-description">설명: {{book.description}}</div>
+  <br>
+  <button class="btn btn-secondary"><a class="text-decoration-none text-white" href="/books">목록</a></button>
+  {{#when currentUser.id 'eq' book.seller.id}}
+  <form class="d-inline" action="/books/{{book.id}}?_method=delete" method="POST">
+  <button type="submit" class="btn btn-secondary">삭제</button>
+  </form>
+  {{/when}}
+  <br>
+  
+</div>

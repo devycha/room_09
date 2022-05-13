@@ -1,0 +1,62 @@
+
+{{> boilerplate}}
+<link rel="stylesheet" href="/css/index.css">
+{{> carousel}}
+<h1 class="title text-center display-1 d-block d-md-none">연구방</h1>
+<div class="home-info">
+    <div class="newspeed wow fadeInUp" data-wow-delay="0.15s">
+        <span>바로가기</span>
+        <div class="container-fluid">
+            <ul class="list link_list">
+                <li><a href="https://www.dankook.ac.kr" target="_blank">단국대학교 메인 바로가기</a></li>
+                <li><a href="https://portal.dankook.ac.kr/web/portal" target="_blank">단국대학교 포털 바로가기</a></li>
+                <li><a href="https://webinfo.dankook.ac.kr/main.do" target="_blank">웹정보시스템 바로가기</a></li>
+                <li><a href="https://nlms.dankook.ac.kr" target="_blank">단국대학교 이러닝 바로가기</a></li>
+                <li><a href="https://cms.dankook.ac.kr/web/eee" target="_blank">전자전기공학부 홈페이지 바로가기</a></li>
+                <li><a href="https://cms.dankook.ac.kr/web/eee/-10" target="_blank">학과 공지사항 바로가기</a></li>
+                <li><a href="https://cms.dankook.ac.kr/web/eee/-6" target="_blank">학과 취업정보 바로가기</a></li>
+                <li><a href="https://libseat.dankook.ac.kr/mobile/PA/roomList.php?campus=J" target="_blank">교내 열람실 현황</a></li>
+                <li><a href="https://www.dankook.ac.kr/web/kor/-468" target="_blank">재학 증명서 발급 링크</a></li>
+                <li><a href="https://cms.dankook.ac.kr/web/eee/-20" target="_blank">선후수 관련 공지</a></li>
+                <li><a href="https://cms.dankook.ac.kr/web/eee/-18" target="_blank">교과 과정</a></li>
+                <li><a href="https://cms.dankook.ac.kr/web/eee/-1" target="_blank">교수 정보</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="newspeed wow fadeInUp" data-wow-delay="0.3s">
+        <span>공지 사항</span>
+        <ul class="list">
+        </ul>
+    </div>
+    <div class="newspeed wow fadeInUp" data-wow-delay="0.45s">
+        <span><a href="/boards" class="board_list">자유 게시판</a></span>
+        <ul class="list">
+            {{#each boardsList}}
+            <li><a class="board_list" href="/boards/{{this.id}}">{{this.title}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="newspeed wow fadeInUp" data-wow-delay="0.6s">
+        <span><a href="/books" class="board_list">중고 서적 거래</a></span>
+        <ul class="list">
+        </ul>
+    </div>
+    <div class="newspeed wow fadeInUp" data-wow-delay="0.75s">
+        <span>자유롭게 질문해요!!</span>
+        <div class="request">
+            <a class="requestLink" href="/qna" style="color:red">질문이 있으신가요?</a>
+        </div>
+        <ul class="list">
+            {{#each questionsList}}
+                <li><a class="board_list" href="/qna">{{this.question}}</a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="newspeed wow fadeInUp" data-wow-delay="0.9s">
+        <span>방장 문의 사항</span>
+        <div class="request">
+            <a class="requestLink" href="/request" style="color:red">방장에게 문의하기</a>
+        </div>
+    </div>
+</div>
+{{> footer }}

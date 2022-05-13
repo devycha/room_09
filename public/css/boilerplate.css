@@ -1,0 +1,8 @@
+@font-face {
+    src: url("../fonts/BMJUA_otf.otf");
+    font-family: "Jua";
+}
+
+.navbar,.footer {
+    background-color: rgba(128, 128, 128, 1)
+}

@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+.boards {
+  display: flex;
+  text-align: center;
+}
+
+.board-form {
+  height: 80%;
+}
+
+.board-list {
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.board-title {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  height: 10%;
+  font-size: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.board-description {
+  height: 70%;
+  margin-bottom: 5%;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.board-comments {
+  text-align: left;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.board-comment {
+  border: 1px solid black;
+}
+
+.boardlist-title {
+  text-align: center;
+  border: 1px solid black;
+}
+
+.boardlist-link {
+  color: gray;
+}
+
+.boardlist-link:hover {
+  color: black;
+  font-weight: bold;
+}
+
+.create-board {
+  margin-left: auto;
+  margin-right: 10%;
+  margin-bottom: 5px;
+}
+
+.create-title {
+  width: 600px;
+}

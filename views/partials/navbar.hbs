@@ -1,0 +1,61 @@
+<link rel='stylesheet' href='/css/navbar.css' />
+<nav class='navbar navbar-expand-lg sticky-top navbar-light'>
+  <div class='container'>
+    <a class='navbar-brand' href='/'>
+      <img
+        src='/images/room.png'
+        alt=''
+        width='30'
+        height='30'
+        style='border-radius: 50%;'
+        class='d-inline-block align-text-top'
+      />
+      <strong><a class='main' href='/'>연구방</a></strong>
+    </a>
+    <button
+      class='navbar-toggler'
+      type='button'
+      data-bs-toggle='collapse'
+      data-bs-target='#navbarSupportedContent'
+      aria-controls='navbarSupportedContent'
+      aria-expanded='false'
+      aria-label='Toggle navigation'
+    >
+      <span class='navbar-toggler-icon'></span>
+    </button>
+    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+      <ul class='navbar-nav me-auto mb-0 mb-lg-0'>
+        <li class='nav-item'>
+          <a class='nav-link' href='/intro'>동아리 소개</a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' href='/map'>오시는 길</a>
+        </li>
+      </ul>
+      <ul class='navbar-nav'>
+        {{#unless currentUser}}
+          <li class='nav-item'>
+            <a class='nav-link' href='/signup'>회원가입</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='/login'>로그인</a>
+          </li>
+        {{else}}
+          <li class='nav-item'>
+            <a
+              class='nav-link'
+              href='/users/mypage'
+              disabled
+            >{{currentUser.name}}님 안녕하세요!</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='/users/mypage'>마이페이지</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='/logout'>로그아웃</a>
+          </li>
+        {{/unless}}
+      </ul>
+    </div>
+  </div>
+</nav>

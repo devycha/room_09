@@ -1,0 +1,20 @@
+{{> boilerplate}}
+<link rel="stylesheet" href="css/style.css">
+<form action="/requests" method="POST" class="requestForm">
+    <h3><span style="color:magenta">방장</span>에게바라는 요청사항을 적어주세요.</h3>
+    <h5>요청사항은 신속하게 전달되어 답변드리도록 노력하겠습니다.</h5>
+    <div class="requestTitle form-floating">
+        <select name="requestOption" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            <option selected>요청 사항</option>
+            <option value="1">동아리 가입 문의</option>
+            <option value="2">동아리 지원비 신청 문의</option>
+            <option value="3">기타</option>
+        </select>
+        <label for="floatingSelect">요청 사항</label>
+    </div>
+    <div class="requestContent form-floating">
+        <textarea name="requestData" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px"></textarea>
+        <label for="floatingTextarea2">내용</label>
+    </div>
+    <input class="btn btn-secondary" type="submit" value="전송">
+</form>
