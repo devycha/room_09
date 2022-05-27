@@ -9,7 +9,7 @@ export class MailService {
     await this.mailerService.sendMail({
       to: email,
       subject: '연구방 회원가입 인증 메일입니다.',
-      from: 'y2kdj9723@naver.com',
+      from: 'insertxyz@naver.com',
       template: '/authMail',
       context: {
         name,
