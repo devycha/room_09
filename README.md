@@ -1,73 +1,105 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# 09Room(NestJS Website)
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+### Intro.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+---
 
-## Description
+`연구방` 동아리 웹사이트 제작 프로젝트
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Installation
+### Development & Framework & Library
 
-```bash
-$ npm install
-```
+---
 
-## Running the app
+- SSR: Front(`handlebars` & `bootstrap`), Back(`nestjs` & `nodejs` & `express`)
+- DB: `MongoDB Atlas` & `mongoose`
+- Module & Controller & Service & Repository Pattern + View
+- REST API: `method-override`
 
-```bash
-# development
-$ npm run start
+### Function & Library
 
-# watch mode
-$ npm run start:dev
+---
 
-# production mode
-$ npm run start:prod
-```
+- 화면구성(`bootstrap` & `wow`)
+- 회원가입 & 로그인 & 로그아웃(`bcrypt` & `cookie & session & jwt`)
+- 입력 유효성 검사(`class-validator`)
+- 회원가입 인증 메일 발송 & 인증여부(`nodemailer` & `naver smtp`)
+- 플래쉬 메시지(`connect-flash`)
+- 인증(Authentication)과 권한(Authorization)
+- 게시물 작성 편집 삭제(`CRUD`)
+- 게시글 Pagination
+- 카카오 맵 & 로드뷰
 
-## Test
+# Site Pages
 
-```bash
-# unit tests
-$ npm run test
+## 목록
 
-# e2e tests
-$ npm run test:e2e
+---
 
-# test coverage
-$ npm run test:cov
-```
+- 홈
+  - `bootstrap`: 기본적인 grid와 component 구성
+  - `wow`: fade-in, fade-out, pop-up 효과
 
-## Support
+![스크린샷 2022-05-27 오후 6.40.03.png](readme-images/home.png)
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+---
 
-## Stay in touch
+- 회원 가입
+  - `class-validator`: 입력 유효성 테스트
+  - pk(학번) 중복 검사
+  - `connect-flash`: 유저 피드백(플래쉬 메시지)
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+![스크린샷 2022-05-27 오후 7.19.03.png](readme-images/member1.png)
 
-## License
+![스크린샷 2022-05-27 오후 7.27.15.png](readme-images/member2.png)
 
-Nest is [MIT licensed](LICENSE).
+---
+
+- 이메일 인증
+  - `nodemalier`: naver의 smtp를 사용한 인증 메일 발송
+
+![스크린샷 2022-05-27 오후 7.30.14.png](readme-images/email.png)
+
+---
+
+- 로그인
+  - 잘못된 정보 입력시 유저 피드백
+  - 로그인 성공시 홈 상단에 username으로 간단한 인사말 추가
+
+![스크린샷 2022-05-27 오후 7.32.39.png](readme-images/login1.png)
+
+![스크린샷 2022-05-27 오후 7.31.12.png](readme-images/login2.png)
+
+---
+
+- 회원 정보 수정
+
+![스크린샷 2022-05-27 오후 7.31.53.png](readme-images/memberInfoChange1.png)
+
+![스크린샷 2022-05-27 오후 7.32.06.png](readme-images/memberInfoChange2.png)
+
+---
+
+- 비밀번호 변경
+
+![스크린샷 2022-05-27 오후 7.31.59.png](readme-images/passwordChange1.png)
+
+![스크린샷 2022-05-27 오후 7.32.24.png](readme-images/passwordChange2.png)
+
+---
+
+- 게시판
+  - 조회수 & 작성일시 구현
+  - 작성자 정보 미공개
+  - Pagination
+
+![스크린샷 2022-05-27 오후 7.51.49.png](readme-images/board.png)
+
+---
+
+- 카카오 맵 & 로드뷰
+
+![스크린샷 2022-05-27 오후 8.09.28.png](readme-images/kakaoMap.png)
+
+![스크린샷 2022-05-27 오후 8.09.39.png](readme-images/kakaoRoadView.png)
